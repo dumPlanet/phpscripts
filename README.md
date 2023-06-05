@@ -1,2 +1,2 @@
 # phpscripts
-some php scripts
+Some php scripts for some ops
