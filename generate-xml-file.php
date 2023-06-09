@@ -7,7 +7,7 @@ function generateXmlFile() {
     if ($_POST['xmlgen'] == 'Yes') {
             
         //create new xml file
-        $dom = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><quotes></quotes>');
+        $dom = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><!DOCTYPE quotes [<!ELEMENT quotes (quote)*><!ELEMENT quote (id|quotetext|author|job|advertising|date)*><!ELEMENT id (#PCDATA)><!ELEMENT quotetext (#PCDATA)><!ELEMENT author (#PCDATA)><!ELEMENT job (#PCDATA)><!ELEMENT advertising (#PCDATA)><!ELEMENT date (#PCDATA)>]><quotes></quotes>');
 
         //database sql
         $database = dbConnect(DBHOST, DBUSER, DBPASSWORD, DBNAME);
